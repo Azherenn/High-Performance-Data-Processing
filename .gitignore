@@ -1,0 +1,14 @@
+# Banco de Dados (Arquivos gigantes)
+*.db
+*.sqlite
+*.sqlite3
+
+# Compilados e Executáveis
+*.exe
+*.dll
+*.so
+*.o
+
+# Python
+__pycache__/
+*.pyc
