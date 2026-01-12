@@ -30,7 +30,7 @@ double maior_venda(double* array, int tamanho){
     for(int i = 0; i < tamanho; i++){
         if(array[i] > maior){
             maior = array[i];
-            print("Maior venda realizada: %f\n", maior);
+            //printf("Maior venda realizada: %f\n", maior);
             }
         }
         return maior;
@@ -42,12 +42,40 @@ double menor_venda(double* array, int tamanho){
     for(int i = 0; i < tamanho; i++){
         if(array[i] < menor){
             menor = array[i];
-            print("Menor venda realizada: %f\n", menor);
+            //printf("Menor venda realizada: %f\n", menor);
             }
         }
         return menor;
     }    
 
+double variancia(double* array, int tamanho){
+
+    double media = calcular_media(array, tamanho);
+    double soma_dos_quadrados = 0.0;
+
+    for(int i = 0; i < tamanho; i++){
+        soma_dos_quadrados += pow(array[i] - media, 2);
+    }
+
+    return soma_dos_quadrados / tamanho;
+
+}
+
 double desvio_padrao(double* array, int tamanho){
+    double var = variancia(array, tamanho);
+    return sqrt(var);
+
+}
+
+int vendas_premium(double* array, int tamanho, double valor_minimo){ 
+    int cont = 0; 
+
+    for(int i = 0; i < tamanho; i++){
+        if(array[i] >= valor_minimo){
+            cont++; 
+        }
+    }
+    
+    return cont;
 
 }
