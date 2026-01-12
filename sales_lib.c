@@ -1,6 +1,7 @@
 #include <math.h>
+#define DLL_EXPORT __declspec(DLL_EXPORT)
 
-double calcular_media(double* array, int tamanho){
+DLL_EXPORT double calcular_media(double* array, int tamanho){
 
 double soma = 0.0;
 
@@ -12,7 +13,7 @@ for(int i = 0; i < tamanho; i++){
     return soma / tamanho; 
 }
 
-double calcular_total(double* array, int tamanho){
+DLL_EXPORT double calcular_total(double* array, int tamanho){
 
 double total = 0.0; 
 
@@ -24,7 +25,7 @@ for(int i = 0; i < tamanho; i++){
     return total; 
 }
 
-double maior_venda(double* array, int tamanho){
+ DLL_EXPORT double maior_venda(double* array, int tamanho){
     double maior = array[0];
 
     for(int i = 0; i < tamanho; i++){
@@ -36,7 +37,7 @@ double maior_venda(double* array, int tamanho){
         return maior;
     }
 
-double menor_venda(double* array, int tamanho){
+DLL_EXPORT double menor_venda(double* array, int tamanho){
     double menor = array[0];
 
     for(int i = 0; i < tamanho; i++){
@@ -48,7 +49,7 @@ double menor_venda(double* array, int tamanho){
         return menor;
     }    
 
-double variancia(double* array, int tamanho){
+DLL_EXPORT double variancia(double* array, int tamanho){
 
     double media = calcular_media(array, tamanho);
     double soma_dos_quadrados = 0.0;
@@ -61,13 +62,13 @@ double variancia(double* array, int tamanho){
 
 }
 
-double desvio_padrao(double* array, int tamanho){
+DLL_EXPORT double desvio_padrao(double* array, int tamanho){
     double var = variancia(array, tamanho);
     return sqrt(var);
 
 }
 
-int vendas_premium(double* array, int tamanho, double valor_minimo){ 
+DLL_EXPORT int vendas_premium(double* array, int tamanho, double valor_minimo){ 
     int cont = 0; 
 
     for(int i = 0; i < tamanho; i++){
