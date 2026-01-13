@@ -21,7 +21,7 @@ By using **SIMD instructions** and **O3 optimization flags**, the C engine achie
 | Engine | Execution Time (1M records) | Speedup |
 | :--- | :--- | :--- |
 | **Python (Pandas)** | 0.0337s | 1x (Baseline) |
-| **C (Optimized DLL)** | **0.0016s** | **~20x Faster** 🚀 |
+| **C (Optimized DLL)** | **0.0016s** | **~20x Faster**  |
 
 *> Tests performed on Linux x64 environment.*
 
