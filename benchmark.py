@@ -25,7 +25,7 @@ elif sistema == "Linux":
 else:
     lib_name = "./libsales.so"
 
-print(f"🔧 System detected: {sistema}. Searching for: {lib_name}")
+print(f"System detected: {sistema}. Searching for: {lib_name}")
 
 if not os.path.exists(lib_name):
     print(f"ECRITICAL ERROR: The file '{lib_name}' not found!")
@@ -62,7 +62,7 @@ c_array = array_type(*valores_python)
 tamanho = len(valores_python)
 
 fim_conv = time.perf_counter()
-print(f"✅ Conversion completed in {fim_conv - inicio_conv:.4f}s")
+print(f"Conversion completed in {fim_conv - inicio_conv:.4f}s")
 
 print("\n--- Starting Python Benchmark (PANDAS/NUMPY) ---")
 start_py = time.perf_counter()
