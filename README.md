@@ -29,19 +29,19 @@ By using **SIMD instructions** and **O3 optimization flags**, the C engine achie
 
 The system works in a 3-layer pipeline:
 
-1.  ** Data Layer (SQLite):**
-    * Stores 1,000,000 generated sales records.
-    * Structured storage (ID, Product, Value, Date).
+1.  Data Layer (SQLite):
+    Stores 1,000,000 generated sales records.
+    Structured storage (ID, Product, Value, Date).
 
-2.  ** Orchestration Layer (Python):**
-    * Extracts raw data from the database.
-    * Converts Python Lists to C Arrays (`ctypes` Marshalling).
-    * Manages the user interface and benchmarking logic.
+2.  Orchestration Layer (Python):
+    Extracts raw data from the database.
+    Converts Python Lists to C Arrays (`ctypes` Marshalling).
+    Manages the user interface and benchmarking logic.
 
-3.  ** Calculation Engine (C):**
-    * Compiled as a Shared Library (`.dll` / `.so`).
-    * Receives memory pointers directly.
-    * Calculates Statistics (Total, Mean, Std Dev) with native performance using AVX/Optimization flags.
+3.  Calculation Engine (C):
+    Compiled as a Shared Library (`.dll` / `.so`).
+    Receives memory pointers directly.
+    Calculates Statistics (Total, Mean, Std Dev) with native performance using AVX/Optimization flags.
 
 ## ⚙️ How to Run
 
