@@ -9,9 +9,9 @@
 
 ##  About the Project
 
-This project simulates a **Big Data** environment by processing **1 million sales records**. The main goal is to overcome the performance limitations of interpreted languages (like Python) in heavy mathematical calculations by integrating a low-level engine written in **C**.
+This project simulates a **Big Data** environment by processing **1 million sales records**. The main goal is to overcome the performance limitations of interpreted languages in heavy mathematical calculations by integrating a low-level engine written in **C**.
 
-**The Challenge:** Processing massive datasets in pure Python can be slow due to the GIL (Global Interpreter Lock) and interpretation overhead.
+**The Challenge:** Processing massive datasets in pure Python can be slow due to the GIL and interpretation overhead.
 **The Solution:** We use Python for what it does best (Data Management & UI) and offload the heavy math to a compiled C Shared Library (DLL).
 
 ##  Performance Benchmark
